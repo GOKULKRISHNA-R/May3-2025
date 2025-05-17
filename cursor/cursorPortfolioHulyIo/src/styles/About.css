@@ -1,0 +1,127 @@
+.about {
+  background-color: var(--background-alt);
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+.about-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.detail-label {
+  font-weight: 600;
+  color: var(--text-primary);
+  min-width: 80px;
+}
+
+.detail-value {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.detail-value:hover {
+  color: var(--primary-orange);
+}
+
+.about-experience {
+  background-color: var(--background);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.about-experience h3 {
+  margin-bottom: var(--spacing-lg);
+  color: var(--text-primary);
+}
+
+.experience-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: var(--spacing-lg);
+  border-left: 2px solid var(--primary-yellow);
+}
+
+.timeline-date {
+  font-weight: 600;
+  color: var(--primary-orange);
+  margin-bottom: var(--spacing-xs);
+}
+
+.timeline-content h4 {
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.timeline-content ul {
+  list-style-type: disc;
+  margin-left: var(--spacing-lg);
+  color: var(--text-secondary);
+}
+
+.timeline-content li {
+  margin-bottom: var(--spacing-xs);
+}
+
+/* Animation delays */
+.about-text { animation-delay: 0.1s; }
+.about-experience { animation-delay: 0.2s; }
+
+@media (max-width: 1024px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .about-text {
+    order: 2;
+  }
+
+  .about-experience {
+    order: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-text p {
+    font-size: 1rem;
+  }
+
+  .timeline-item {
+    padding-left: var(--spacing-md);
+  }
+
+  .timeline-content ul {
+    margin-left: var(--spacing-md);
+  }
+} 
